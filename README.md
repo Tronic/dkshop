@@ -1,12 +1,5 @@
 See Documentation/Project Report.pdf for full documentation.
 
-Now deployed to Heroku: https://dkshop.herokuapp.com/
+Live demo available at https://dkshop.zi.fi/ - the games are just mockup data and payments won't cost you anything.
 
-Accounts aaltouser, aaltodev, devadmin and super available for various views,
-all have password salakala
-
-Bugs:
-* /games.json creation takes too long and times out on Heroku
-* Media files (game icons) not fully supported on Heroku
-
-Run locally to circumvent these issues.
+The only real game is Super Deoxy, implemented as a part of this project work. Try it out at https://dkshop.zi.fi/WSD/SuperDeoxy/
