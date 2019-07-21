@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang=en><meta charset=utf-8><title>Super Deoxy</title><style>
+	body { margin: 0; background: black; overflow: hidden; }
+	canvas { background: linear-gradient(to bottom, #08f, #aaf); }
+	aside { position: fixed; width: 1280px; display: flex; font-weight: bold; justify-content: space-around; }
+</style>
+<aside>
+	<p>DANGER: <meter id=oxy value=0 high=100 max=200></meter>
+	<p>POINTS: <output id=points></output>
+	<p><input type=button onclick=save() value=Save><input type=button onclick=load() value=Load>
+</aside>
+<canvas width=1280 height=720></canvas><script src=deoxy.js></script>

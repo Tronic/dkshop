@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* General scaling, prevent overwide */
+picture, img, iframe { max-width: 100%; }
+/* Generic link and hilight styles */
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #09f;  /* link cyan (the opposite of hilight orange) */
+	transition: all 200ms ease-out;  /* Smooth hover effects */
+}
+a:hover, a:focus { color: #f60; text-decoration: none; outline: 0; }
+a:active { text-shadow: 0 0 .1em; /* Glow effect */ }
+strong { color: #f60;  /* Hilight orange */ }
+h2 { color: #f60; text-shadow: 0 0 .1em; font-size: larger; }
+p { max-width: 40em; text-align: justify; }
+/* Main grid layout */
+body {
+	background: black;
+	color: white;
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"sidenav main"
+		"none masternav";
+}
+main { grid-area: main; background: #444; width: 95vw; border-radius: 1rem; padding: 1rem; display: flow; }
+#sidenav { grid-area: sidenav; width: 10rem; margin-left: -9rem; transition: margin-left 500ms; background: #f60; }
+#sidenav:focus-within, #sidenav:hover { margin-left: 0; }
+#sidenav::before { content: "≡"; margin-left: 9rem; font-size: larger;}
+#masternav { grid-area: masternav; }
+header { grid-area: header; display: flex; justify-content: space-between; align-items: center; padding: .5rem 1em; flex-wrap: wrap;}
+/* Navigation menus */
+nav ul { padding: 0; list-style-type: none; }
+#sidenav { font-size: smaller; padding: 0 0 1em 0; border-radius: 0 .5rem .5rem 0; }
+#sidenav a { color: white; font-weight: bold; display: block; padding: 0.3rem 1rem; }
+#sidenav a:focus, #sidenav a:hover { background-color: #09f; }
+#masternav ul { display: flex; justify-content: flex-end; }
+#masternav ul li a {
+	display: block;
+	padding: .5rem 1rem;
+	margin: .5rem;
+	text-shadow: 0 0 .5rem;
+	font-weight: bold;
+}
+/* Breadcrumb navigation */
+#breadcrumbs { display: flex; font-size: smaller; font-weight: bold; list-style-type: none; }
+#breadcrumbs li::before { content: "»"; font-size: larger; color: grey; margin: 0.4rem; }
+/* Normal tables and forms */
+table {
+	width: 10rem;
+	border-radius: .3rem;
+	background: black;
+	box-shadow: 0 0 2rem black;
+	margin: 1rem 0;
+}
+table caption {
+	color: #f60;
+	text-shadow: 0 0 .5em;
+	padding: 0;
+	caption-side: top;
+}
+th, td {
+	padding: 0.5em;
+	vertical-align: top;
+}
+td.numeric { text-align: right; }
+form th {
+	text-align: left;
+	width: 10rem;
+}
+#sales { width: 100%; }
+#chart { box-shadow: 0 0 2rem black; border-radius: .3rem; width: 100%;}
+/* Games listing view */
+#games { display: flex; flex-wrap: wrap; list-style: none; }
+#games li { width: 11rem; text-align: center; }
+#games img { width: 10rem; height: 10rem; border-radius: .5rem 1.5rem .5rem .5rem; }
+#games p { margin: 0; width: 100%; }
+#games a {
+	border-radius: .5rem 2rem .5rem .5rem;
+	display: block;
+	font-weight: bold;
+	color: white;
+	padding: .5rem;
+}
+#games a:hover, #games a:focus { background: #09f; transform: scale(1.2); }
+#games a:hover { background: #f60; }
+/* Game iframe */
+#game {
+	background: white;
+	box-shadow: 0 0 2rem black;
+	border: none;
+}
+#content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#content > * {
+	margin: 1em;
+}
+#gameinfo {
+	display: flex;
+	flex-wrap: wrap;
+}
+#gameinfo img { width: 10rem; height: 10rem; margin: .5rem; border-radius: .5rem; }
+#gameinfo details {
+	width: 100%;
+}
+/* Popup messages */
+#messages {	width: 100%; position: fixed; display: flex; flex-wrap: wrap; justify-content: space-around; background: #0008; }
+@keyframes messageAnim {
+	from, to { margin-top: -4em; }
+	20%, 80% { margin-top: 1em; }
+}
+#messages div { font-size: 200%; font-weight: bold; text-shadow: 0 0 .2em; animation: messageAnim 3s linear both; }
+#messages .warning, #messages .error { color: #f60; }
+/* Form styles */
+form .helptext, form .errorlist {
+	display: block;
+	font-size: smaller;
+	margin-bottom: 1rem;
+}
+form .errorlist {
+	color: #f60;
+}
+form ul {
+	list-style-type: none;
+	padding: 0;
+}
+form input, form textarea {
+	background: #444;
+	color: white;
+	border: 0;
+	border-radius: .3rem;
+	margin: 0.2rem;
+	outline: none;
+}
+form input[type="submit"] { transition: all 200ms; box-shadow: 0 0 .5rem black; }
+main input[type="submit"] { background: #aaa; }
+form:focus-within input[type="submit"] { background: #09f; }  /* Active form's submit in cyan */
+form input[type="submit"]:hover, form input[type="submit"]:focus { background: #f60; }
+p { white-space: pre-wrap; }
+/* Root font size is default (16px) for 480-1920px and scales proportionally outside this range */
+@media(max-width: 480px) { html { font-size: 3.3333vw; /* 16px * 100vw / 480px */ } }
+@media(min-width: 1920px) { html { font-size: 0.8333vw; /* 16px * 100vw / 1920px */ } }
+/* Alternative layout for small devices */
+@media(max-width: 40rem) {
+	#games a { display: flex; text-align: left; }
+	#games img { width: 2rem; height: 2rem;}
+	/* Note: logo is changed via picture element in HTML */
+}
+/* Large displays */
+@media(min-width: 60rem) {
+	header img {
+		width: 33vw;
+		height: auto;
+	}
+}
+/* Remove some cruft when printing */
+@media print {
+	html { font-size: 11pt; /* Word default font size */ }
+	#messages { display: none; }
+	header form { display: none; }
+	nav, #breadcrumbs { display: none; }
+	details:not([open]) { display: none; }
+}

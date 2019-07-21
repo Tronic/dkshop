@@ -1,0 +1,419 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">80%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>924</td>
+                <td>187</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="737 924">80%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="_dkproject___init___py.html">K:\dkproject\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_dkproject_settings_py.html">K:\dkproject\settings.py</a></td>
+                <td>28</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="27 28">96%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_dkproject_urls_py.html">K:\dkproject\urls.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_html5tagger_py.html">K:\html5tagger.py</a></td>
+                <td>107</td>
+                <td>18</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="89 107">83%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_manage_py.html">K:\manage.py</a></td>
+                <td>9</td>
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 9">78%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop___init___py.html">K:\webshop\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_accountviews_py.html">K:\webshop\accountviews.py</a></td>
+                <td>78</td>
+                <td>46</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="32 78">41%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_admin_py.html">K:\webshop\admin.py</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="36 36">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_api_py.html">K:\webshop\api.py</a></td>
+                <td>75</td>
+                <td>22</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="53 75">71%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_forms_py.html">K:\webshop\forms.py</a></td>
+                <td>26</td>
+                <td>3</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="23 26">88%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_layout_py.html">K:\webshop\layout.py</a></td>
+                <td>64</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="64 64">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0001_initial_py.html">K:\webshop\migrations\0001_initial.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0002_auto_20190109_1303_py.html">K:\webshop\migrations\0002_auto_20190109_1303.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0003_auto_20190118_0805_py.html">K:\webshop\migrations\0003_auto_20190118_0805.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0004_developer_user_py.html">K:\webshop\migrations\0004_developer_user.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0005_auto_20190123_1227_py.html">K:\webshop\migrations\0005_auto_20190123_1227.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0006_auto_20190124_1338_py.html">K:\webshop\migrations\0006_auto_20190124_1338.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0007_game_description_py.html">K:\webshop\migrations\0007_game_description.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0008_sale_ref_py.html">K:\webshop\migrations\0008_sale_ref.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0009_auto_20190130_0749_py.html">K:\webshop\migrations\0009_auto_20190130_0749.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0010_auto_20190130_1321_py.html">K:\webshop\migrations\0010_auto_20190130_1321.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0011_auto_20190131_0943_py.html">K:\webshop\migrations\0011_auto_20190131_0943.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0012_auto_20190204_0949_py.html">K:\webshop\migrations\0012_auto_20190204_0949.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0013_auto_20190205_1435_py.html">K:\webshop\migrations\0013_auto_20190205_1435.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0014_auto_20190212_1258_py.html">K:\webshop\migrations\0014_auto_20190212_1258.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0015_auto_20190212_1306_py.html">K:\webshop\migrations\0015_auto_20190212_1306.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0016_auto_20190212_1312_py.html">K:\webshop\migrations\0016_auto_20190212_1312.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0017_payment_py.html">K:\webshop\migrations\0017_payment.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations_0018_payment_date_py.html">K:\webshop\migrations\0018_payment_date.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_migrations___init___py.html">K:\webshop\migrations\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_models_py.html">K:\webshop\models.py</a></td>
+                <td>115</td>
+                <td>5</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="110 115">96%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_payments_py.html">K:\webshop\payments.py</a></td>
+                <td>63</td>
+                <td>50</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="13 63">21%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_slugs_py.html">K:\webshop\slugs.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_tests_py.html">K:\webshop\tests.py</a></td>
+                <td>49</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="49 49">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_urls_py.html">K:\webshop\urls.py</a></td>
+                <td>9</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="8 9">89%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="_webshop_views_py.html">K:\webshop\views.py</a></td>
+                <td>162</td>
+                <td>39</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="123 162">76%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.2</a>,
+            created at 2019-02-13 09:35
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
